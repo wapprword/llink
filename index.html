@@ -43,9 +43,7 @@
     }
 
     .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
     }
 
     .netflix-button {
@@ -53,15 +51,18 @@
 
       padding: 14px 30px;
 
-      background: #e50914;
-      color: #ffffff;
-
+      border: none;
       border-radius: 6px;
 
-      text-decoration: none;
+      background: #e50914;
+      color: #fff;
 
       font-size: 18px;
       font-weight: 600;
+
+      text-decoration: none;
+
+      cursor: pointer;
 
       transition:
         background 0.15s ease,
@@ -82,14 +83,58 @@
 
   <div class="container">
 
-    <a
+    <button
+      type="button"
       class="netflix-button"
-      href="https://netflix.com/?nftoken=BgjCwOvcAxL%2BAVK11CdFkB9glJLiaWwlojm%2BSWJljoEVs5QBtJw3q27AUu19S05YNB9HYd9KQythBxydyix%2Fzqo6KqZmZpJFCgkISj0D2vWoKMupOYBuwL%2BTcP%2F0LZVgeAIuxSI6Z0N%2B4xWUS9k4oeaGYIYx%2BSmExWVJst8wemhYfOakXxwWdkTaPWOBzFFc58ckwO0dmKuuygJGsovbaxEYTbyiSY7IFDdCTo9mYqhmQEiibSBEh%2BMvbX5Ap9CxnfxqplIVF3ZEecoc9nKb1OWeyxji6Fvv04xCRd0aPXia%2Bu%2FKqyKdW2wvCzSJ0JmgwuQDo5HD9hloD9Z0dGevhME4uWTbuJhYGAYiDgoMLW5Sq8fVU%2Fde4dYl"
+      id="openNetflix"
     >
       进入 Netflix
-    </a>
+    </button>
 
   </div>
+
+  <script>
+
+    const netflixUrl =
+      "https://netflix.com/?nftoken=BgjCwOvcAxL%2BAVK11CdFkB9glJLiaWwlojm%2BSWJljoEVs5QBtJw3q27AUu19S05YNB9HYd9KQythBxydyix%2Fzqo6KqZmZpJFCgkISj0D2vWoKMupOYBuwL%2BTcP%2F0LZVgeAIuxSI6Z0N%2B4xWUS9k4oeaGYIYx%2BSmExWVJst8wemhYfOakXxwWdkTaPWOBzFFc58ckwO0dmKuuygJGsovbaxEYTbyiSY7IFDdCTo9mYqhmQEiibSBEh%2BMvbX5Ap9CxnfxqplIVF3ZEecoc9nKb1OWeyxji6Fvv04xCRd0aPXia%2Bu%2FKqyKdW2wvCzSJ0JmgwuQDo5HD9hloD9Z0dGevhME4uWTbuJhYGAYiDgoMLW5Sq8fVU%2Fde4dYl";
+
+
+    document
+      .getElementById("openNetflix")
+      .addEventListener("click", function () {
+
+        /*
+         * 点击按钮后：
+         *
+         * 当前标签页：
+         * GitHub Pages
+         *
+         * 新标签页：
+         * Netflix Token URL
+         */
+
+        const newTab = window.open(
+          netflixUrl,
+          "_blank"
+        );
+
+
+        /*
+         * 如果浏览器阻止了弹出窗口，
+         * newTab 会是 null。
+         */
+
+        if (!newTab) {
+
+          alert(
+            "浏览器阻止了新标签页，请允许此网站打开弹出窗口。"
+          );
+
+        }
+
+      });
+
+  </script>
 
 </body>
 
