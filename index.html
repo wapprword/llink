@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -23,10 +24,16 @@
       font-size: 18px;
       font-weight: 600;
     }
-    a:hover { background: #f6121d; }
   </style>
 </head>
 <body>
-  <a href="https://netflix.com/?nftoken=BgjCwOvcAxL%2BAVK11CdFkB9glJLiaWwlojm%2BSWJljoEVs5QBtJw3q27AUu19S05YNB9HYd9KQythBxydyix%2Fzqo6KqZmZpJFCgkISj0D2vWoKMupOYBuwL%2BTcP%2F0LZVgeAIuxSI6Z0N%2B4xWUS9k4oeaGYIYx%2BSmExWVJst8wemhYfOakXxwWdkTaPWOBzFFc58ckwO0dmKuuygJGsovbaxEYTbyiSY7IFDdCTo9mYqhmQEiibSBEh%2BMvbX5Ap9CxnfxqplIVF3ZEecoc9nKb1OWeyxji6Fvv04xCRd0aPXia%2Bu%2FKqyKdW2wvCzSJ0JmgwuQDo5HD9hloD9Z0dGevhME4uWTbuJhYGAYiDgoMLW5Sq8fVU%2Fde4dYl">进入 Netflix</a>
+  <a id="go" href="#">进入 Netflix</a>
+
+  <script>
+    const target =
+      "https://netflix.com/?nftoken=BgjCwOvcAxL%2BAVK11CdFkB9glJLiaWwlojm%2BSWJljoEVs5QBtJw3q27AUu19S05YNB9HYd9KQythBxydyix%2Fzqo6KqZmZpJFCgkISj0D2vWoKMupOYBuwL%2BTcP%2F0LZVgeAIuxSI6Z0N%2B4xWUS9k4oeaGYIYx%2BSmExWVJst8wemhYfOakXxwWdkTaPWOBzFFc58ckwO0dmKuuygJGsovbaxEYTbyiSY7IFDdCTo9mYqhmQEiibSBEh%2BMvbX5Ap9CxnfxqplIVF3ZEecoc9nKb1OWeyxji6Fvv04xCRd0aPXia%2Bu%2FKqyKdW2wvCzSJ0JmgwuQDo5HD9hloD9Z0dGevhME4uWTbuJhYGAYiDgoMLW5Sq8fVU%2Fde4dYl";
+
+    document.getElementById("go").href = target;
+  </script>
 </body>
 </html>
